@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/*中央寄せ用*/
+.center{
+  text-align: center;
+  font color:#0000ff;
+}
+
+body {
+background-color: #edf9fc;
+color: #000000;
+}
+
+/*ローディングアニメ*/
+
+.cp_loading01 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	-webkit-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+.cp_loading01 {
+	border: 1px solid #29b6f6;
+	border-radius: 50px;
+}
+.cp_loading01:after {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	bottom: -6px;
+	left: -6px;
+	content: '';
+	-webkit-animation: loading01 1s linear infinite;
+	        animation: loading01 1s linear infinite;
+	border: 6px solid transparent;
+	border-top-color: #29b6f6;
+	border-radius: 50px;
+	box-shadow: 0px 0px 0px 1px #29b6f6;
+}
+@-webkit-keyframes loading01 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes loading01 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+.container {
+  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+/* ここから下がボタンのCSS　*/
+.btn-gradation {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-image: linear-gradient(-90deg, #FF006E, #FFD500);
+  transition: .5s;
+  background-size: 200%;
+}
+
+.btn-gradation:hover {
+  background-position: right center;
+}
+
+
+/*背景アニメーション*/
+.cp_anime13 {
+	position: relative;
+	z-index: 1;
+}
+.cp_anime13,
+.cp_anime13 .cp_first,
+.cp_anime13 .cp_second,
+.cp_anime13 .cp_third {
+	width: 100%;
+	height: 100vh;
+}
+.cp_anime13 .cp_first,
+.cp_anime13 .cp_second,
+.cp_anime13 .cp_third {
+	position: absolute;
+}
+.cp_anime13 .cp_second,
+.cp_anime13 .cp_third {
+	opacity: 0;
+}
+.cp_anime13 .cp_first {
+	z-index: 10;
+	animation: anime13_first 10s infinite;
+	background: linear-gradient(#e6ee9c, #a5d6a7);
+}
+@-webkit-keyframes anime13_first {
+	0%   { opacity: 1.0; }
+	10%  { opacity: 0.8; }
+	20%  { opacity: 0.6; }
+	30%  { opacity: 0.4; }
+	40%  { opacity: 0.2; }
+	50%  { opacity: 0.1; }
+	60%  { opacity: 0.2; }
+	70%  { opacity: 0.4; }
+	80%  { opacity: 0.6; }
+	90%  { opacity: 0.8; }
+	100% { opacity: 1.0; }
+}
+@keyframes anime13_first {
+	0%   { opacity: 1.0; }
+	10%  { opacity: 0.8; }
+	20%  { opacity: 0.6; }
+	30%  { opacity: 0.4; }
+	40%  { opacity: 0.2; }
+	50%  { opacity: 0.1; }
+	60%  { opacity: 0.2; }
+	70%  { opacity: 0.4; }
+	80%  { opacity: 0.6; }
+	90%  { opacity: 0.8; }
+	100% { opacity: 1.0; }
+}
+.cp_anime13 .cp_second {
+	z-index: 20;
+	animation: anime13_second 10s infinite; animation-delay: 2s;
+	background: linear-gradient(#80deea, #90caf9);
+}
+@-webkit-keyframes anime13_second {
+	0%   { opacity: 0; }
+	10%  { opacity: 0.2; }
+	20%  { opacity: 0.4; }
+	30%  { opacity: 0.6; }
+	40%  { opacity: 0.8; }
+	50%  { opacity: 1.0; }
+	60%  { opacity: 0.8; }
+	70%  { opacity: 0.6; }
+	80%  { opacity: 0.4; }
+	90%  { opacity: 0.2; }
+	100% { opacity: 0; }
+}
+@keyframes anime13_second {
+	0%   { opacity: 0; }
+	10%  { opacity: 0.2; }
+	20%  { opacity: 0.4; }
+	30%  { opacity: 0.6; }
+	40%  { opacity: 0.8; }
+	50%  { opacity: 1.0; }
+	60%  { opacity: 0.8; }
+	70%  { opacity: 0.6; }
+	80%  { opacity: 0.4; }
+	90%  { opacity: 0.2; }
+	100% { opacity: 0; }
+}
+.cp_anime13 .cp_third {
+	z-index: 30;
+	animation: anime13_third 10s infinite;
+	animation-delay: 8s;
+	background: linear-gradient(#b39ddb, #f48fb1);
+}
+@-webkit-keyframes anime13_third {
+	0%   { opacity: 0; }
+	10%  { opacity: 0.2; }
+	20%  { opacity: 0.4; }
+	30%  { opacity: 0.6; }
+	40%  { opacity: 0.8; }
+	50%  { opacity: 1.0; }
+	60%  { opacity: 0.8; }
+	70%  { opacity: 0.6; }
+	80%  { opacity: 0.4; }
+	90%  { opacity: 0.2; }
+	100% { opacity: 0; }
+}
+@keyframes anime13_third {
+	0%   { opacity: 0; }
+	10%  { opacity: 0.2; }
+	20%  { opacity: 0.4; }
+	30%  { opacity: 0.6; }
+	40%  { opacity: 0.8; }
+	50%  { opacity: 1.0; }
+	60%  { opacity: 0.8; }
+	70%  { opacity: 0.6; }
+	80%  { opacity: 0.4; }
+	90%  { opacity: 0.2; }
+	100% { opacity: 0; }
+}
+
+/*コロコロ*/
+.cp_keyframes {
+	margin: 60px auto;
+	color: #ffffff;
+	background: #29b6f6;
+	border-radius: 6px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	-webkit-animation: keyframes 3s 0.5s infinite alternate;
+	        animation: keyframes 3s 0.5s infinite alternate;
+}
+@-webkit-keyframes keyframes {
+	0% {
+		-webkit-transform: translate3d(-135px, 0, 0) rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		        transform: translate3d(-135px, 0, 0) rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+	}
+	50% {
+		-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 180deg) scale3d(0.5, 0.5, 0.5);
+		        transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 180deg) scale3d(0.5, 0.5, 0.5);
+	}
+	100% {
+		-webkit-transform: translate3d(135px, 0, 0) rotate3d(0, 0, 1, 360deg) scale3d(1, 1, 1);
+		        transform: translate3d(135px, 0, 0) rotate3d(0, 0, 1, 360deg) scale3d(1, 1, 1);
+	}
+}
+@keyframes keyframes {
+	0% {
+		-webkit-transform: translate3d(-135px, 0, 0) rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		        transform: translate3d(-135px, 0, 0) rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+	}
+	50% {
+		-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 180deg) scale3d(0.5, 0.5, 0.5);
+		        transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 180deg) scale3d(0.5, 0.5, 0.5);
+	}
+	100% {
+		-webkit-transform: translate3d(135px, 0, 0) rotate3d(0, 0, 1, 360deg) scale3d(1, 1, 1);
+		        transform: translate3d(135px, 0, 0) rotate3d(0, 0, 1, 360deg) scale3d(1, 1, 1);
+	}
+}
